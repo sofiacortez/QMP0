@@ -1,2 +1,2 @@
 # QueMePongo
-Ejercicio "Que me pongo" grupo 8
+Ejercicio "Que me pongo" 
