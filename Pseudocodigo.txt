@@ -1,0 +1,64 @@
+
+-----------------------------PRENDA----------------------------
+
+//No pongo a la categoria como atributo de la prenda porque esta asociada al tipo.
+
+clase Prenda {
+      TipoPrenda tipo; 
+      String material;
+      String colorPrimario;
+      String colorSecundario;
+
+      Prenda (TipoPrenda tipo, 
+          String material,
+          String colorPrimario,
+          String colorSecundario
+      ) {
+
+//Verifico que no haya valores nulos
+          void verificarValores(tipo, material, colorPrimario);
+
+          this.tipo = tipo,
+          this.material = material,
+          this.colorPrimario = colorPrimario,
+          this.colorSecundario = colorSecundario
+        }
+
+      void verificarValores(TipoPrenda tipo, String material, String colorPrimario) {
+           if (tipo == null || material == null || colorPrimario == null) 
+               Throw new requerimientosIncompletosException();
+      }
+}
+
+-----------------------TIPO PRENDA------------------------
+
+enum TipoPrenda {
+     Categoria categoria
+ 
+     TipoPrenda(CategoriaPrenda categoria){
+         this.categoria = categoria
+     }
+
+// Cada uno de estos tipos de prendas habría que relacionarlo con una categoria, no se como representarlo.
+
+     ZAPATOS,
+     CAMISA_MANGA_CORTA,
+     PANTALON,
+     ANTEOJOS_DE_SOL
+     ZAPATILLAS,
+     PANUELO,
+     REMERA_MANGA_LARGA,
+     JEAN,
+     BOTAS
+     //ETC. ETC. ETC.
+}
+
+---------------------------CATEGORIA--------------------------
+
+enum Categoria {
+     PARTE_SUPERIOR,
+     PARTE_INFERIOR,
+     CALZADO,
+     ACCESORIOS
+}
+
